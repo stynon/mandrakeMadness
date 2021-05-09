@@ -11,7 +11,6 @@ import sigfox
 relay = Pin('P2', mode=Pin.OUT)
 i2c = I2C(0, I2C.MASTER)
 si7021 = SI7021(i2c)
-#loraWan.loraConnect()
 
 while True:
     temperature = si7021.temperature()
