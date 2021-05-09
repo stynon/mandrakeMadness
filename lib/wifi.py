@@ -4,7 +4,7 @@ import pycom
 import time
 import request
 
-def connectSchool():
+def wifiConnect():
     wlan = WLAN(mode=WLAN.STA)
     pycom.heartbeat(False)
 
