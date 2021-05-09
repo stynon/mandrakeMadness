@@ -2,13 +2,8 @@ from machine import I2C
 from machine import Pin
 from SI7021 import SI7021
 import time
-
-#connect wifi + LoRa
-import wifi
-import lorawan
 import ultrasonic
 import adafruit
-import time
 
 #connect to Sigfox
 import sigfox
@@ -33,11 +28,6 @@ while True:
 
     if humidity <= 70:
         relay.value(1)
-        #try:
-        #     loraWan.send(humidity)
-        # except OSError as e:
-        #     if e.args[0] == 11:
-        #         loraWan.loraConnect()
         sigfox.sigfoxConnect(humidity)
         print(humidity)
     else:
