@@ -2,13 +2,11 @@ from machine import I2C
 from machine import Pin
 from SI7021 import SI7021
 import time
-
-#connect wifi + LoRa
-import wifi
-import lorawan
 import ultrasonic
 import adafruit
-import time
+
+#connect LoRa
+import lorawan
 
 relay = Pin('P2', mode=Pin.OUT)
 i2c = I2C(0, I2C.MASTER)
